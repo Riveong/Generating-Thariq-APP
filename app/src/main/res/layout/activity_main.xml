@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Thariq"
+        android:textSize="50dp"
+        android:padding="50dp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/tombol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/generate_thariq"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/something"
+        android:textSize="20dp"
+        android:padding="50dp"
+        android:textAlignment="center"/>
+</LinearLayout>
