@@ -1,5 +1,6 @@
 package com.dicoding.numbertothariq
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,19 +9,16 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var tomriq: Button
-    private lateinit var hasriq: TextView
-
+private lateinit var hasriq: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tomriq = findViewById(R.id.tombol)
-        hasriq = findViewById(R.id.hasil)
+        val tomriq: Button  = findViewById(R.id.tombol)
+        hasriq= findViewById(R.id.hasil)
+        val pinriq: Button = findViewById(R.id.moreThariq)
         tomriq.setOnClickListener(this)
-
-
-
+        pinriq.setOnClickListener(this)
 
 
     }
@@ -33,6 +31,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             hasriq.text = resultmized.toString()+" Thariq"
 
 
+        }
+
+
+        if (tomriq?.id == R.id.moreThariq){
+            val moveIntent = Intent(this@MainActivity, MainActivity2::class.java)
+            startActivity(moveIntent)
         }
 
 
