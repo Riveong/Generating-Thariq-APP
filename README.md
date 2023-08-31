@@ -10,3 +10,6 @@ The more stupid the app get, the more skill I have!!
 # v-1.0  
 + Adding randomizer button
 + Adding over 100+ adjetives
+
+# v-1.1
++ "The thariq cult" activity has been created...
