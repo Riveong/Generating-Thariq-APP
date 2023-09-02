@@ -22,10 +22,12 @@
         android:id="@+id/backRiq"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Back to Thariq Generator"
+        android:layout_marginBottom="80dp"
         android:backgroundTint="@color/black"
+        android:text="Back to Thariq Generator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -33,13 +35,26 @@
         android:id="@+id/typeRiq"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/Thariqballs"
         android:backgroundTint="@color/black"
-
-
+        android:text="@string/Thariqballs"
         app:layout_constraintBottom_toTopOf="@+id/backRiq"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/thariqCult"
+        app:layout_constraintVertical_bias="0.815" />
+
+    <Button
+        android:id="@+id/parcelable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+
+
+        android:text="View Thariq Bio"
+        app:layout_constraintBottom_toTopOf="@+id/typeRiq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thariqCult" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

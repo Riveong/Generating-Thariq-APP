@@ -12,6 +12,9 @@ class MainActivity2 : AppCompatActivity(), View.OnClickListener {
     private lateinit var BackRiq: Button
     private lateinit var TypeRiq: Button
     private lateinit var ThariqCult: TextView
+    private lateinit var ThariqBiotton: Button
+
+
     companion object {
        const val THARIQBANYAK = ""
     }
@@ -23,8 +26,11 @@ class MainActivity2 : AppCompatActivity(), View.OnClickListener {
         BackRiq = findViewById(R.id.backRiq)
         TypeRiq = findViewById(R.id.typeRiq)
         ThariqCult = findViewById(R.id.thariqCult)
+        ThariqBiotton = findViewById(R.id.parcelable)
+
         BackRiq.setOnClickListener(this)
         TypeRiq.setOnClickListener(this)
+        ThariqBiotton.setOnClickListener(this)
 
         val thariqbanyak = intent.getStringExtra(THARIQBANYAK)
         var thatBigText = "Thariq has $thariqbanyak now..."
@@ -54,6 +60,22 @@ class MainActivity2 : AppCompatActivity(), View.OnClickListener {
                 val moveIntent = Intent(this@MainActivity2, MainActivity3::class.java)
                 moveIntent.putExtra(MainActivity3.THARIQSYNDROME, "ligmaballs")
                 startActivity(moveIntent)
+            }
+
+            R.id.parcelable -> {
+                val thariq = Thariq(
+                    "Thariq the 5th",
+                    10,
+                    "Mastourbator"
+
+                )
+
+                val moveIntent = Intent(this@MainActivity2, ThariqBio::class.java)
+                moveIntent.putExtra(ThariqBio.EXTRA_THARIQ, thariq)
+                startActivity(moveIntent)
+
+
+
             }
 
         }
