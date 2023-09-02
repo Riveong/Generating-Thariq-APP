@@ -1,11 +1,15 @@
 package com.dicoding.numbertothariq
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.TextView
 
-class ThariqBio : AppCompatActivity() {
+class ThariqBio : AppCompatActivity(), View.OnClickListener {
     companion object{
         const val EXTRA_THARIQ = "extra_thariq"
 
@@ -17,7 +21,7 @@ class ThariqBio : AppCompatActivity() {
         setContentView(R.layout.activity_thariq_bio)
 
         val bioThariq: TextView = findViewById(R.id.bioTHariq)
-
+        val order: Button = findViewById(R.id.Order)
 
         val thariq = if (Build.VERSION.SDK_INT >= 33){
         intent.getParcelableExtra<Thariq>(EXTRA_THARIQ, Thariq::class.java)
@@ -33,10 +37,27 @@ class ThariqBio : AppCompatActivity() {
             bioThariq.text = text
 
 
+        }
 
+
+
+        order.setOnClickListener(this)
+
+
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id){
+        R.id.Order -> {
+            val phoneNumber = "69420"
+            val dial = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+            startActivity(dial)
 
 
         }
 
+
+
+        }
     }
 }
